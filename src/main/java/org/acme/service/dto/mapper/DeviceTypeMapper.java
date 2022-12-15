@@ -1,7 +1,7 @@
-package org.acme.resource.service.dto.mapper;
+package org.acme.service.dto.mapper;
 
-import org.acme.resource.smartObject.DeviceType;
-import org.acme.resource.service.dto.DeviceTypeDto;
+import org.acme.repository.DeviceType;
+import org.acme.service.dto.DeviceTypeDto;
 import org.mapstruct.Mapper;
 
 import java.util.List;

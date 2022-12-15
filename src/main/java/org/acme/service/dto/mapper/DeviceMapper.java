@@ -1,8 +1,8 @@
-package org.acme.resource.service.dto.mapper;
+package org.acme.service.dto.mapper;
 
 
-import org.acme.resource.service.dto.DeviceDto;
-import org.acme.resource.smartObject.Device;
+import org.acme.service.dto.DeviceDto;
+import org.acme.repository.Device;
 import org.mapstruct.Mapper;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 

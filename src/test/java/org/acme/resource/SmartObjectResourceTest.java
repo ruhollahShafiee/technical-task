@@ -1,28 +1,46 @@
 package org.acme.resource;
 
+import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+
+import javax.ws.rs.core.HttpHeaders;
+import javax.ws.rs.core.MediaType;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.is;
+
 
 @QuarkusTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@TestHTTPEndpoint(SmartObjectResource.class)
 public class SmartObjectResourceTest {
 
 
     @BeforeAll
-    public void prepareSmartObjectMockData(){
+    public static void prepareSmartObjectMockData() {
 
     }
 
     @Test
-    public void testHelloEndpoint() {
+    @Order(1)
+    public void testAddEndpoint() {
         given()
-          .when().post("/smartObject/add")
-          .then()
-             .statusCode(200)
-             .body(is("Hello from RESTEasy Reactive"));
+                .header(javax.ws.rs.core.HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON)
+                .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
+                .when().get()
+                .then()
+                .statusCode(200);
+    }
+
+
+    @Test
+    @Order(2)
+    public void testAllEndpoint() {
+        given().header(javax.ws.rs.core.HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON)
+                .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
+                .when().get()
+                .then()
+                .statusCode(200);
     }
 
 }

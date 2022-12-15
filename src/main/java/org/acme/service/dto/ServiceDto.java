@@ -1,18 +1,17 @@
-package org.acme.resource.smartObject;
+package org.acme.service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Map;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Operation {
+public class ServiceDto {
 
     private String name;
-    private OperationType type;
-    private Map<String, Object> operationInputParam;
     private String description;
+    private List<OperationDto> operations;
 }

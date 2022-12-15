@@ -1,4 +1,4 @@
-package org.acme.resource.smartObject;
+package org.acme.service.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -7,12 +7,13 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Service {
+public class SmartModelDto {
 
-    private String name;
-    private String description;
-    private List<Operation> operations;
+    private DeviceDto deviceDto;
+    private List<ServiceDto> serviceDtos;
+
 }

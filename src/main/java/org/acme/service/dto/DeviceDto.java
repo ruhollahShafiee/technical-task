@@ -1,4 +1,4 @@
-package org.acme.resource.service.dto;
+package org.acme.service.dto;
 
 
 import lombok.AllArgsConstructor;

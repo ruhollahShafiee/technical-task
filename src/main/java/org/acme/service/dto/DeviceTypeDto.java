@@ -1,17 +1,20 @@
-package org.acme.resource.service.dto;
+package org.acme.service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.Map;
+
+
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ServiceDto {
+public class DeviceTypeDto {
 
     private String name;
-    private String description;
-    private List<OperationDto> operations;
+    private String code;
+    private Map<String,String> fields;
+
 }

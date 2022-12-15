@@ -1,10 +1,8 @@
-package org.acme.resource.smartObject;
+package org.acme.repository;
 
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
-import java.util.Date;
 import java.util.Map;
 
 @Data

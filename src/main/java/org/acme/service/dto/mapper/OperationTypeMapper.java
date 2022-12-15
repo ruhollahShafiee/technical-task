@@ -1,7 +1,7 @@
-package org.acme.resource.service.dto.mapper;
+package org.acme.service.dto.mapper;
 
-import org.acme.resource.smartObject.OperationType;
-import org.acme.resource.service.dto.OperationTypeDto;
+import org.acme.repository.OperationType;
+import org.acme.service.dto.OperationTypeDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 

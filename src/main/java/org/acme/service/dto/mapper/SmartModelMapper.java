@@ -1,7 +1,7 @@
-package org.acme.resource.service.dto.mapper;
+package org.acme.service.dto.mapper;
 
-import org.acme.resource.smartObject.SmartModel;
-import org.acme.resource.service.dto.SmartModelDto;
+import org.acme.repository.SmartModel;
+import org.acme.service.dto.SmartModelDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.NullValuePropertyMappingStrategy;

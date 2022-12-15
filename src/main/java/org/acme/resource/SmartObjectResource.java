@@ -1,7 +1,7 @@
-package org.acme.resource.resource;
+package org.acme.resource;
 
-import org.acme.resource.service.SmartModelService;
-import org.acme.resource.service.dto.SmartModelDto;
+import org.acme.service.SmartModelService;
+import org.acme.service.dto.SmartModelDto;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 import javax.inject.Inject;
@@ -12,8 +12,14 @@ import javax.ws.rs.core.Response;
 @Path("/smartObject")
 public class SmartObjectResource {
 
+    private SmartModelService smartModelService;
+
     @Inject
-    SmartModelService smartModelService;
+    public SmartObjectResource(SmartModelService smartModelService) {
+
+        this.smartModelService = smartModelService;
+
+    }
 
     @Path("/add")
     @PUT

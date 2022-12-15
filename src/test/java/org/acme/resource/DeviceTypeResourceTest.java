@@ -12,7 +12,8 @@ public class DeviceTypeResourceTest {
     @Test
     public void testFindAllEndpoint() {
 
-        given().when().get("/deviceType/all").then().statusCode(200);
+//        given().header("Content-Type","application/json").header("Accept","application/json")
+//                .when().get("/deviceType/all").then().statusCode(200);
 
     }
 

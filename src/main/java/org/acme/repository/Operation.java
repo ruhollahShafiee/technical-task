@@ -1,19 +1,18 @@
-package org.acme.resource.service.dto;
+package org.acme.repository;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.bson.types.ObjectId;
 
 import java.util.Map;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OperationDto {
+public class Operation {
 
     private String name;
-    private String operationTypeCode;
+    private OperationType type;
     private Map<String, Object> operationInputParam;
     private String description;
 }

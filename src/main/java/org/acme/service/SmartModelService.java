@@ -1,10 +1,10 @@
-package org.acme.resource.service;
+package org.acme.service;
 
 
 import io.quarkus.panache.common.Sort;
-import org.acme.resource.service.dto.SmartModelDto;
-import org.acme.resource.service.dto.mapper.SmartModelMapper;
-import org.acme.resource.smartObject.SmartModel;
+import org.acme.service.dto.SmartModelDto;
+import org.acme.service.dto.mapper.SmartModelMapper;
+import org.acme.repository.SmartModel;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -14,8 +14,15 @@ import java.util.List;
 @ApplicationScoped
 public class SmartModelService {
 
-    @Inject
+
     SmartModelMapper smartModelMapper;
+
+    @Inject
+    public SmartModelService(SmartModelMapper smartModelMapper) {
+
+        this.smartModelMapper = smartModelMapper;
+
+    }
 
     public void add(SmartModelDto smartModelDto) {
 

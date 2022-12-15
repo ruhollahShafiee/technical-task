@@ -1,8 +1,8 @@
-package org.acme.resource.resource;
+package org.acme.resource;
 
 
-import org.acme.resource.service.DeviceTypeService;
-import org.acme.resource.service.dto.DeviceTypeDto;
+import org.acme.service.DeviceTypeService;
+import org.acme.service.dto.DeviceTypeDto;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 import javax.inject.Inject;
@@ -13,8 +13,14 @@ import javax.ws.rs.core.Response;
 @Path("/deviceType")
 public class DeviceTypeResource {
 
-    @Inject
     private DeviceTypeService deviceTypeService;
+
+    @Inject
+    public DeviceTypeResource(DeviceTypeService deviceTypeService) {
+
+        this.deviceTypeService = deviceTypeService;
+
+    }
 
     @Path("/add")
     @PUT

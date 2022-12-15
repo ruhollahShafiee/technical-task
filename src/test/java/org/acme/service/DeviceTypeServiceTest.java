@@ -2,9 +2,7 @@ package org.acme.service;
 
 
 import io.quarkus.test.junit.QuarkusTest;
-import io.restassured.internal.common.assertion.Assertion;
-import org.acme.resource.service.DeviceTypeService;
-import org.junit.jupiter.api.Assertions;
+
 
 import javax.inject.Inject;
 

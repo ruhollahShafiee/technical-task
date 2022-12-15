@@ -1,4 +1,4 @@
-package org.acme.resource.smartObject;
+package org.acme.repository;
 
 import io.quarkus.mongodb.panache.PanacheMongoEntity;
 import lombok.AllArgsConstructor;

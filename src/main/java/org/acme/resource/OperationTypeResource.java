@@ -1,8 +1,8 @@
-package org.acme.resource.resource;
+package org.acme.resource;
 
 
-import org.acme.resource.service.OperationTypeService;
-import org.acme.resource.service.dto.OperationTypeDto;
+import org.acme.service.OperationTypeService;
+import org.acme.service.dto.OperationTypeDto;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 import javax.inject.Inject;
@@ -13,8 +13,14 @@ import javax.ws.rs.core.Response;
 @Path("/operationType")
 public class OperationTypeResource {
 
-    @Inject
     private OperationTypeService operationTypeService;
+
+    @Inject
+    public OperationTypeResource(OperationTypeService operationTypeService) {
+
+        this.operationTypeService = operationTypeService;
+
+    }
 
     @Path("/add")
     @PUT

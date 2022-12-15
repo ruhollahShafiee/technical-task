@@ -1,11 +1,10 @@
-package org.acme.resource.smartObject;
+package org.acme.repository;
 
 
 import io.quarkus.mongodb.panache.PanacheMongoEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.bson.codecs.pojo.annotations.BsonDiscriminator;
 
 import java.util.Map;
 
