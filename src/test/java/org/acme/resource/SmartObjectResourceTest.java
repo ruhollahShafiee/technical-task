@@ -16,10 +16,10 @@ import static io.restassured.RestAssured.given;
 public class SmartObjectResourceTest {
 
 
-    @BeforeAll
-    public static void prepareSmartObjectMockData() {
-
-    }
+//    @BeforeAll
+//    public static void prepareSmartObjectMockData() {
+//
+//    }
 
     @Test
     @Order(1)

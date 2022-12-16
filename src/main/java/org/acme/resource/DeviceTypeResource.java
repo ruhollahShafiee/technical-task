@@ -3,6 +3,7 @@ package org.acme.resource;
 
 import org.acme.service.DeviceTypeService;
 import org.acme.service.dto.DeviceTypeDto;
+import org.bson.types.ObjectId;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 import javax.inject.Inject;
@@ -23,12 +24,22 @@ public class DeviceTypeResource {
     }
 
     @Path("/add")
-    @PUT
+    @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response add(@RequestBody DeviceTypeDto deviceTypeDto) {
 
         deviceTypeService.add(deviceTypeDto);
+        return Response.ok().build();
+
+    }
+
+    @Path("/find/{id}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response findById(@PathParam("id") ObjectId id) {
+
+        deviceTypeService.findById(id);
         return Response.ok().build();
 
     }

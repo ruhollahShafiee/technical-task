@@ -3,6 +3,7 @@ package org.acme.service;
 import org.acme.service.dto.DeviceTypeDto;
 import org.acme.service.dto.mapper.DeviceTypeMapper;
 import org.acme.repository.DeviceType;
+import org.bson.types.ObjectId;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -23,6 +24,12 @@ public class DeviceTypeService {
 
         DeviceType deviceType = deviceTypeMapper.toDeviceType(deviceTypeDto);
         deviceType.persist();
+
+    }
+
+    public DeviceTypeDto findById(ObjectId id) {
+
+        return this.deviceTypeMapper.toDeviceTypeDto(DeviceType.findById(id));
 
     }
 

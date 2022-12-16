@@ -23,7 +23,7 @@ public class OperationTypeResource {
     }
 
     @Path("/add")
-    @PUT
+    @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response add(@RequestBody OperationTypeDto operationTypeDto) {
